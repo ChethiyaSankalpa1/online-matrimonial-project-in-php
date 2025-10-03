@@ -29,6 +29,13 @@ if(!$is_logged_in) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?php echo ucfirst($current_page); ?></title>
 <style>
+/* Hide header only on complete profile page */
+<?php if($current_page == 'complete_profile'): ?>
+.header, .header-public {
+    display: none !important;
+}
+<?php endif; ?>
+
 /* Reset */
 * {margin:0; padding:0; box-sizing:border-box;}
 body {font-family: Arial, sans-serif; background:#f4f4f4; color:#333;}
